@@ -1,7 +1,12 @@
 # Projeto: Aplicativo de Lista de Tarefas (To-Do List)
 
 ## Descrição
-Um aplicativo web simples para gerenciar tarefas diárias, permitindo aos usuários adicionar, editar, excluir e marcar tarefas como concluídas.
+Um aplicativo web simples, dividido em cliente e servidor, para gerenciar tarefas diárias, permitindo aos usuários adicionar, editar, excluir e marcar tarefas como concluídas.
+
+## Links dos Repositórios
+[Servidor](https://github.com/gabrieltorreiro/todo-list-api) (Este Repositório)
+
+[Cliente](https://github.com/gabrieltorreiro/todo-list-client)
 
 ## Funcionalidades Essenciais
 
@@ -23,7 +28,7 @@ Um aplicativo web simples para gerenciar tarefas diárias, permitindo aos usuár
 - [X] Criar Tarefa
 - [X] Editar tarefa
 - [X] Deletar tarefa
-- [ ] Marcar tarefa como concluída
+- [x] Marcar tarefa como concluída
 - [ ] Filtrar tarefas por nome
 
 ## Funcionalidades Extras
