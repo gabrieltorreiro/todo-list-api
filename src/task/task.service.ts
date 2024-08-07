@@ -11,9 +11,12 @@ export class TaskService {
     private taskRepository: Repository<Task>,
   ) {}
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   async create(createTaskDto: CreateTaskDto): Promise<Task> {
-    const newTask = this.taskRepository.create(createTaskDto);
+    const currentDate = new Date();
+    const newTask = this.taskRepository.create({
+      createDate: currentDate,
+      ...createTaskDto,
+    });
     await this.taskRepository.save(newTask);
     return newTask;
   }
@@ -29,7 +32,6 @@ export class TaskService {
     return task;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   async update(id: number, updateTaskDto: UpdateTaskDto) {
     const targetTask = await this.taskRepository.findOneBy({ id });
     if (!targetTask) throw new NotFoundException('Task not found');

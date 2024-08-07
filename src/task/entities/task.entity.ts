@@ -6,16 +6,11 @@ export class Task {
   id: number;
 
   @Column()
-  create: Date;
+  createDate!: Date;
 
   @Column()
   name: string;
 
   @Column({ default: false })
-  status: boolean;
-
-  constructor(name: string) {
-    this.create = new Date();
-    this.name = name;
-  }
+  status!: boolean;
 }

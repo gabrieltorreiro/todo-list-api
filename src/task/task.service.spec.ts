@@ -34,7 +34,7 @@ describe('TaskService', () => {
 
     it('should return the task when the task ID is found in the database', async () => {
       const task: Task = {
-        create: new Date(),
+        createDate: new Date(),
         id: 1,
         name: 'task 1',
         status: false,
@@ -60,7 +60,7 @@ describe('TaskService', () => {
 
     it('should update the status of a task to done when the task ID is valid', async () => {
       const task: Task = {
-        create: new Date(),
+        createDate: new Date(),
         id: 1,
         name: 'task 1',
         status: false,
@@ -90,7 +90,7 @@ describe('TaskService', () => {
 
     it('should update the status of a task to undone when the task ID is valid', async () => {
       const task: Task = {
-        create: new Date(),
+        createDate: new Date(),
         id: 1,
         name: 'task 6',
         status: true,
