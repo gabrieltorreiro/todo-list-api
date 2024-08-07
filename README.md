@@ -8,6 +8,19 @@ Um aplicativo web simples, dividido em cliente e servidor, para gerenciar tarefa
 
 [Cliente](https://github.com/gabrieltorreiro/todo-list-client)
 
+## Requisitos
+
+ - Node v18.20.1
+ - NPM v9.2.0
+
+## Como rodar?
+
+```sh
+git clone https://github.com/gabrieltorreiro/todo-list-api
+cd todo-list-api
+npm start
+```
+
 ## Funcionalidades Essenciais
 
 ### Usuario
