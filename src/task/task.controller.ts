@@ -35,6 +35,16 @@ export class TaskController {
     return this.taskService.update(+id, updateTaskDto);
   }
 
+  @Patch(':id/done')
+  doneTask(@Param('id') id: string) {
+    return this.taskService.doneTask(+id);
+  }
+
+  @Patch(':id/undone')
+  undoneTask(@Param('id') id: string) {
+    return this.taskService.undoneTask(+id);
+  }
+
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.taskService.remove(+id);
