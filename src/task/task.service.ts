@@ -38,6 +38,22 @@ export class TaskService {
     return updatedTask;
   }
 
+  async doneTask(id: number) {
+    const targetTask = await this.taskRepository.findOneBy({ id });
+    if (!targetTask) throw new NotFoundException('Task not found');
+    targetTask.status = true;
+    await this.taskRepository.save(targetTask);
+    return targetTask;
+  }
+
+  async undoneTask(id: number) {
+    const targetTask = await this.taskRepository.findOneBy({ id });
+    if (!targetTask) throw new NotFoundException('Task not found');
+    targetTask.status = false;
+    await this.taskRepository.save(targetTask);
+    return targetTask;
+  }
+
   async remove(id: number) {
     const targetTask = await this.taskRepository.findOneBy({ id });
     if (!targetTask) throw new NotFoundException('Task not found');

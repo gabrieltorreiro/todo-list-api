@@ -11,6 +11,9 @@ export class Task {
   @Column()
   name: string;
 
+  @Column({ default: false })
+  status: boolean;
+
   constructor(name: string) {
     this.create = new Date();
     this.name = name;
